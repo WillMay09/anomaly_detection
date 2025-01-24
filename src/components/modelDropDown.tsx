@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import {
   JSXElementConstructor,
   Key,
@@ -36,9 +37,9 @@ export default function modelDropDown({ models }: ModelDropdownProps) {
       </select>
       {/* For now display what model is selected */}
       {selectedModel && (
-        <p className="mt-3">
+        <Link href='/predictionStats'className="mt-3">
           You have selected <strong>{selectedModel}</strong>
-        </p>
+        </Link>
       )}
     </div>
   );
